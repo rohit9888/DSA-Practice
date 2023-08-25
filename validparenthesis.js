@@ -9,7 +9,7 @@ var isValid = function(s) {
         if (c === '(' || c === '{' || c === '[') { 
             stack.push(c);
         } else { 
-            if (stack.length && stack[stack.length - 1] !== dict[c])  {
+            if (!stack.length || stack[stack.length - 1] !== dict[c])  {
                 console.log("helllo")
                 return false; 
             }
@@ -18,4 +18,4 @@ var isValid = function(s) {
     }
     return !stack.length
 };
-console.log(isValid("()[]"))
+console.log(isValid("]"))
