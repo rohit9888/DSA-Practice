@@ -10,7 +10,6 @@ var isValid = function(s) {
             stack.push(c);
         } else { 
             if (!stack.length || stack[stack.length - 1] !== dict[c])  {
-                console.log("helllo")
                 return false; 
             }
             stack.pop(); 
